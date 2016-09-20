@@ -20,8 +20,10 @@ class Spaceship {
     }
   }
   shipAssignment(){
-    this.crewMembers.forEach(function(crewMember){
-      crewMember.currentShip = // .bind? closure? arrow function?
+    // this.crewMembers.forEach(function(crewMember){
+    //   crewMember.currentShip = // .bind? closure? arrow function?
+    this.crewMembers.forEach((crewMember) => {
+      crewMember.currentShip = this
     })
   }
 }

@@ -19,17 +19,29 @@ class CrewMember {
   // }
   engageWarpDrive(){
     if (this.position === "Pilot") {
-      return 'had no effect'
+      if (this.currentShip !== 'Looking for a Rig') {
+        this.currentShip.warpDrive = 'engaged!';
+      } else {
+        return 'had no effect'
+      }
     }
   }
   setsInvisibility(){
     if (this.position === "Defender") {
-      return 'had no effect'
+      if (this.currentShip !== 'Looking for a Rig') {
+        this.currentShip.cloaked = true;
+      } else {
+        return 'had no effect'
+      }
     }
   }
   chargePhasers(){
     if (this.position === "Gunner") {
-      return 'had no effect'
+      if (this.currentShip !== 'Looking for a Rig') {
+        this.currentShip.phasersCharge = 'charged!';
+      } else {
+        return 'had no effect'
+      }
     }
   }
 }
